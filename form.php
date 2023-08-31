@@ -7,6 +7,7 @@ include("log.php")?>
   <title>Recruitment Startup</title>
   <link rel="stylesheet" href="style.css">
   <script src="server.js"></script>
+  <style></style>
   
 </head>
 <body>
