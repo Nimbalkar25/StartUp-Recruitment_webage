@@ -5,63 +5,46 @@ include("log.php")?>
 <html>
 <head>
   <title>Recruitment Startup</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="server.js"></script>
   
 </head>
 <body>
   <header class="fixed-header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="log.png" alt="Company Logo"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" onclick="scrollToWelcomeSection(); return false;">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/role/software-engineer">Software Engineer Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/role/product-manager">Product Manager Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/role/data-analyst">Data Analyst Jobs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" onclick="preventDefaultClick(event);scrollToAboutUs()">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" onclick="preventDefaultClick(event);openModal('signupModal');closeModal('signinModal')">Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn" id="in" href="#" onclick="closeModal('signupModal');openModal('signinModal')">Sign In</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-</header>
+    <nav>
+      <img src="log.png" alt="Company Logo" onclick="scrollToWelcomeSection()">
+      <ul>
+        <li><a href="#" onclick="scrollToWelcomeSection(); return false;">Home</a></li>
+        <li>
+          <div class="dropdown-container" onmouseover="showJobList()" onmouseout="hideJobList()">
+            <a onclick="preventDefaultClick(event)" class="jobk" href="#">Jobs</a>
+            <nav id="jobLinks" class="dropdown_content w-dropdown-list">
+              <a href="/role/software-engineer" class="block-link w-dropdown-link">Software Engineer Jobs</a>
+              <a href="/role/product-manager" class="block-link w-dropdown-link">Product Manager Jobs</a>
+              <a href="/role/data-analyst" class="block-link w-dropdown-link">Data Analyst Jobs</a>
+              <!-- Add more job links as needed -->
+            </nav>
+          </div>
+        </li>
+        <li><a href="#" onclick="preventDefaultClick(event);scrollToAboutUs()";>About Us</a></li>
+        <li><a href="#" onclick="preventDefaultClick(event);openModal('signupModal');closeModal('signinModal')">Contact Us</a></li>
+        <li><a href="#" class="btn" id="in" onclick="closeModal('signupModal');openModal('signinModal')">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
   <section class="hero" id="heroSection">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h1>Welcome Recruiters And Job Seekers</h1>
-          <p>Find the best software engineers, product managers, data scientists, and more!</p>
-          <a href="#" class="btn btn-primary" onclick="openModal('signupModal')">Sign Up</a>
-          <a href="#" class="btn btn-primary" onclick="preventDefaultClick(event);scrollToAboutUs()">Learn More</a>
-        </div>
-      </div>
+    <div class="content" >
+      <h1>Welcome Recruiters And Job Seekers</h1>
+      <p>Find the best software engineers, product managers, data scientists, and more!</p>
+      <a href="#" class="btn" onclick="openModal('signupModal')">Sign Up</a>
+      <a href="#" class="btn" onclick="preventDefaultClick(event);scrollToAboutUs()">Learn More</a>
     </div>
   </section>
 
  
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
         <div class="services">
@@ -135,7 +118,7 @@ include("log.php")?>
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required>
     
-          <button type="submit" class="btn btn-primary" name="send">Sign Up</button>
+          <button type="submit" name="send">Sign Up</button>
         </form>
       </section>
       <p>Already have an account? <a href="#" onclick="closeModal('signupModal');openModal('signinModal')">Sign In</a></p>
@@ -155,7 +138,7 @@ include("log.php")?>
           <label for="signin-password">Password:</label>
           <input type="password" name="password" id="signin-password"  required>
           
-          <button type="submit" class="btn btn-primary" name="sign">Sign In</button>
+          <button type="submit" name="sign" >Sign In</button>
           </form>
           <p><a href="#">Forgot Password?</a></p>
           </section>
@@ -191,8 +174,6 @@ include("log.php")?>
   </footer>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
