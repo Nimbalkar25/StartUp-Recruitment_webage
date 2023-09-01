@@ -1,6 +1,6 @@
 <?php include("db.php");
 include("log.php")?>
-<!-- hello commit -->
+
 <!DOCTYPE html>
 <html>
 <head>
