@@ -28,7 +28,7 @@ include("log.php")?>
         </li>
         <li><a href="#" onclick="preventDefaultClick(event);scrollToAboutUs()";>About Us</a></li>
         <li><a href="#" onclick="preventDefaultClick(event);openModal('signupModal');closeModal('signinModal')">Contact Us</a></li>
-        <li><a href="#" class="btn" id="in" onclick="closeModal('signupModal');openModal('signinModal')">Sign In</a></li>
+        <li><a href="#" class="btn" id="in" onclick="closeModal('signupModal');openModal('signinModal')">Log In</a></li>
       </ul>
     </nav>
   </header>
@@ -130,7 +130,7 @@ include("log.php")?>
     <div class="modal-content">
       <span class="close" onclick="closeModal('signinModal')">&times;</span>
       <section class="signin-section">
-        <h2>Sign In</h2>
+        <h2>Log In</h2>
         <form id="signin-form" action ="log.php" method="POST">
           <label for="signin-username">Username/Email:</label>
           <input type="text" name="input" id="input"  required>
