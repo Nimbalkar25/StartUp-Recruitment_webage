@@ -46,7 +46,7 @@ include("log.php")?>
  
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+    <div class="col-sm-12 wow fadeInUp" data-wow-delay="0.2s" id="profileContainer" onclick="window.location.href = 'register.php';">
         <div class="services">
           <div class="services-icon">
             <img class="" src="https://d383au3bye3rv1.cloudfront.net/static/images/optimized/feature_icon_2.png" data-src="https://d383au3bye3rv1.cloudfront.net/static/images/optimized/feature_icon_2.png" height="60" width="60" alt="Service">

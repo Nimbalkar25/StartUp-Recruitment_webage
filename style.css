@@ -198,13 +198,13 @@ header {
 }
 
 /* Animation for Features Section */
-/* .features {
+.features {
   animation: fadeIn 1s ease;
 }
 
 .feature {
   animation: slideInFromLeft 1s ease;
-} */
+}
 
 @keyframes slideInFromLeft {
   from {
@@ -338,7 +338,10 @@ footer {
   }
   
 
-
+  .container .wow {
+    transform: none !important; /* Disable the transformation */
+    transition: none !important; /* Disable any transition effects */
+  }
 .btn {
   display: inline-block;
   background-color: #007BFF;

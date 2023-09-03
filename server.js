@@ -32,6 +32,8 @@ function preventDefaultClick(event) {
   event.preventDefault();
   event.stopPropagation();
 }
+// register
+
 
 // backend
     // Hide success message after 2 seconds
@@ -40,4 +42,4 @@ function preventDefaultClick(event) {
         if (successMsg) {
             successMsg.style.display = 'none';
         }
-    }, 10000); // 5000 milliseconds = 2 seconds
+    }, 10000); // 5000 milliseconds = 1 seconds
